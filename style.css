@@ -1,0 +1,180 @@
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:regular,500,600,700);
+
+:root{
+    --light-nav-back: #fff;
+    --light-nav-text: #000;
+    --light-nav-hover: #90e0ef;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.light{
+    --nav-back: var(--light-nav-back);
+    --nav-text: var(--light-nav-text);
+    --nav-hover: var(--light-nav-hover);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Dancing Script';
+}
+
+nav{
+    background: var(--nav-back);
+    color: var(--nav-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 9vh;
+    position: sticky;
+    top: 0;
+}
+
+nav .mainMenu{
+    list-style: none;
+    display: flex;
+}
+
+nav .mainMenu li a{
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--nav-text);
+    font-size: 1.2rem;
+}
+
+nav .mainMenu li a:hover{
+    background: var(--nav-hover);
+}
+
+nav .openMenu{
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+
+}
+
+nav .mainMenu .closeMenu, .icons i{
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+.fa-facebook:hover{
+    color: rgb(0, 110, 255);
+}
+
+.fa-instagram:hover{
+    color: rgb(255, 0, 191);
+}
+
+.fa-github:hover{
+    color: rgb(255, 123, 0);
+}
+
+nav .logo{
+    margin: 6px 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.home{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("assets/img/bg.jpg");
+    background-size: cover;
+}
+
+.about{
+    width: 100%;
+    height: 100vh;
+    background: #e2ece9;
+}
+
+.projects{
+    width: 100%;
+    height: 100vh;
+    background: #e2ece9;
+}
+
+.contact{
+    width: 100%;
+    height: 100vh;
+    background: #e2ece9;
+}
+
+@media(max-width: 800px){
+    nav .mainMenu{
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: var(--nav-back);
+        transition: top 1s ease;
+        display: none;
+    }
+
+    nav .mainMenu .closeMenu{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    nav .openMenu{
+        display: block;
+    }
+
+    nav .mainMenu li a:hover{
+        background: none;
+        color: var(--nav-hover);
+        font-size: 1.6rem;
+    }
+
+    .icons i{
+        display: inline-block;
+        padding: 12px;
+    }
+
+    .home{
+        background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("assets/img/bg2.jpeg");
+        background-size: cover;
+        background-position: center;
+    }
+}
