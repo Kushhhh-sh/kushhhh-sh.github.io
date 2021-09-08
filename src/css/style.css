@@ -9,12 +9,14 @@
     --light-bg-about: #f8edeb;
     --light-bg-contact: #e2ece9;
     --light-bg-projects: #f0efeb;
+	--light-bg-toggle: #e4e4e4;
 
 	--dark-nav-back: #000;
 	--dark-nav-text: #fff;
     --dark-bg-about: #343a40;
     --dark-bg-projects: #495057;
     --dark-bg-contact: #6c757d;
+	--dark-bg-toggle:#252525;
 }
 /* ------------------ROOT ELEMENTS------------------ */
 
@@ -56,6 +58,7 @@
     --bg-about: var(--light-bg-about);
     --bg-contact:var(--light-bg-contact);
     --bg-projects: var(--light-bg-projects);
+	--bg-toggle: var(--light-bg-toggle);
 }
 
 .dark {
@@ -64,7 +67,8 @@
 	--nav-hover: var(--light-nav-hover);
     --bg-about: var(--dark-bg-about);
     --bg-contact: var(--dark-bg-contact);
-    --bg-projects: var(--dark-bg-projects)
+    --bg-projects: var(--dark-bg-projects);
+	--bg-toggle: var(--dark-bg-toggle);
 }
 /* ---------------LIGHT AND DARK MODE COLOR VARIABLES END--------------- */
 
@@ -94,6 +98,8 @@ body {
 .scroll-active {
 	background: var(--nav-back);
 	color: var(--nav-text);
+	box-shadow: 0 3px 1em rgba(0, 0, 0, 0.5);
+	z-index: 10;
 }
 
 .navbar .mainMenu {
@@ -150,6 +156,7 @@ body {
 	margin: 6px 15px;
 	font-size: 20px;
 	cursor: pointer;
+	display: flex;
 }
 /* ----------------------NAVBAR STYLE END---------------------- */
 
@@ -225,6 +232,71 @@ body {
 }
 /* -------------------CONTACT STYLE END------------------- */
 
+/* -----------------DARK MODE LIGHT MODE TOGGLE START----------------- */
+.dark-light-toggle{
+	width: 150px;
+	height: 70px;
+	border-radius: 35px;
+	background: var(--bg-toggle);
+	color: var(--nav-text);
+	position: fixed;
+	bottom: 40px;
+	left: -65px;
+	box-shadow: 4px 4px 1em rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	transition: all .5s ease;
+}
+
+.dark-light-toggle input{
+	display: none;
+}
+
+.dark-light-toggle label{
+	width: 50px;
+	height: 50px;
+	font-size: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	outline: none;
+	border: none;
+	border-radius: 50%;
+	margin-right: 15px;
+	background-color: var(--bg-toggle);
+	color: var(--nav-text);
+	cursor: pointer;
+}
+
+#sun{
+	display: none;
+}
+
+#moon{
+	display: block;
+}
+
+.topBtn{
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	bottom: 20px;
+	right: 20px;
+	border-radius: 50%;
+	background: var(--bg-toggle);
+	display: none;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 4px 4px 1em rgba(0, 0, 0, 0.5);
+	transition: all .5s ease;
+}
+
+.topBtn i{
+	font-size: 27px;
+	color: var(--nav-text);
+}
+/* -----------------DARK MODE LIGHT MODE TOGGLE END----------------- */
 
 /* -------------------RESPONSIVE STYLE START------------------- */
 @media (max-width: 800px) {
@@ -247,7 +319,7 @@ body {
 		top: 0;
 		right: 0;
 		left: 0;
-		z-index: 10;
+		z-index: 112;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
@@ -341,8 +413,31 @@ body {
 	}
 	/* -----------------------RESPONSIVE HOME END----------------------- */
 
-    /* ------------------RESPONSIVE ABOUT START------------------ */
+	/* -----------------RESPONSIVE DARK MODE LIGHT MODE TOGGLE START----------------- */
+	.dark-light-toggle{
+		height: 40px;
+		border-radius: 20px;
+		left: -100px;
+	}
 
-    /* ------------------RESPONSIVE ABOUT END------------------ */
+	.dark-light-toggle label{
+		height: 40px;
+		width: 40px;
+		display: flex;
+		font-size: 23px;
+		justify-content: center;
+		align-items: center;
+		margin: 10px;
+	}
+
+	.topBtn{
+		width: 40px;
+		height: 40px;
+	}
+
+	.topBtn i{
+		font-size: 20px;
+	}
+	/* -----------------RESPONSIVE DARK MODE LIGHT MODE TOGGLE END----------------- */
 }
 /* -------------------RESPONSIVE STYLE END------------------- */

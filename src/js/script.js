@@ -32,10 +32,13 @@ function close() {
 window.addEventListener('scroll', function () {
     let navbar = this.document.querySelector('nav');
     let windowPosition = window.scrollY > 80;
+    let topBtn = this.document.querySelector('.topBtn');
     if (windowPosition) {
         navbar.classList.add('scroll-active');
+        topBtn.style.display = "flex";
     } else {
         navbar.classList.remove('scroll-active');
+        topBtn.style.display = "none";
     }
 });
 
@@ -69,3 +72,22 @@ var typed = new Typed('.type', {
     loop: true
 });
 //--------------------HOME PAGE JS END--------------------
+
+//-----------------DARK MODE LIGHT MODE TOGGLE START-----------------
+let body = document.querySelector('body');
+let sun = document.querySelector('#sun');
+let moon = document.querySelector('#moon');
+let Toggle = document.querySelector('#toggle');
+
+Toggle.addEventListener('change', function(){
+    if(this.checked){
+        moon.style.display = "none";
+        sun.style.display = "block";
+        body.className = "dark";
+    }else{
+        moon.style.display = "block";
+        sun.style.display = "none";
+        body.className = "light"
+    }   
+})
+//-----------------DARK MODE LIGHT MODE TOGGLE END-----------------

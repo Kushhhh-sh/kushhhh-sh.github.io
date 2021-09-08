@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="src/img/logo2-no-bg.svg" size="192x192" type="svg/image" />
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
@@ -14,25 +15,26 @@
 
 <body class="light">
     <!-- ------------------NAVBAR START------------------------ -->
-        <nav class="navbar">
-            <div class="logo">
-                <h2>Ku$# Agarwal</h2>
-            </div>
-            <div class="openMenu"><i class="fa fa-bars"></i></div>
-            <ul class="mainMenu">
-                <li><a class="homeBtn" href="#home">Home</a></li>
-                <li><a class="aboutBtn" href="#about">About</a></li>
-                <li><a class="projectsBtn" href="#projects">Projects</a></li>
-                <li><a class="contactBtn" href="#contact">Contact</a></li>
-                <div class="closeMenu"><i class="fa fa-times"></i></div>
-                <span class="icons">
-                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/kushhhh.sh" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.github.com/Kushhhh-sh" target="_blank"><i class="fab fa-github"></i></a>
-                    <!-- <i class="fa fa-abacus"></i> -->
-                </span>
-            </ul>
-        </nav>
+    <nav class="navbar">
+        <div class="logo">
+            <!-- <img src="src/img/logo2-no-bg.svg" alt="" style="width: 50px;"> -->
+            <h2>Ku$# Agarwal</h2>
+        </div>
+        <div class="openMenu"><i class="fa fa-bars"></i></div>
+        <ul class="mainMenu">
+            <li><a class="homeBtn" href="#home">Home</a></li>
+            <li><a class="aboutBtn" href="#about">About</a></li>
+            <li><a class="projectsBtn" href="#projects">Projects</a></li>
+            <li><a class="contactBtn" href="#contact">Contact</a></li>
+            <div class="closeMenu"><i class="fa fa-times"></i></div>
+            <span class="icons">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/kushhhh.sh" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.github.com/Kushhhh-sh" target="_blank"><i class="fab fa-github"></i></a>
+                <!-- <i class="fa fa-abacus"></i> -->
+            </span>
+        </ul>
+    </nav>
     <!-- ------------------NAVBAR START------------------------ -->
 
     <!-- ------------------HOME PAGE START------------------ -->
@@ -64,8 +66,18 @@
 
     </div>
     <!-- -----------------CONTACT PAGE END----------------- -->
+
+    <!-- ---------------DARK MODE LIGHT MODE TOGGLW START--------------- -->
+    <div class="dark-light-toggle">
+        <input type="checkbox" name="toggle" id="toggle"></button>
+        <label for="toggle"><i class="far fa-sun" id="sun"></i><i class="far fa-moon" id="moon"></i></label>
+    </div>
+    <div class="topBtn"><a href="#home"><i class="fas fa-arrow-up"></i></a></div>
+    <!-- ---------------DARK MODE LIGHT MODE TOGGLW START--------------- -->
+
 </body>
 <script src="src/js/typed.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 <script src="src/js/script.js"></script>
+
 </html>
