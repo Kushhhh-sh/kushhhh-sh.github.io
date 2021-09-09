@@ -91,3 +91,7 @@ Toggle.addEventListener('change', function(){
     }   
 })
 //-----------------DARK MODE LIGHT MODE TOGGLE END-----------------
+
+//--------------------CONTACT PAGE JS START--------------------
+
+//--------------------CONTACT PAGE JS END--------------------

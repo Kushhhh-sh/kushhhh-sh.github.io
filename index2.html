@@ -39,13 +39,18 @@
 
     <!-- ------------------HOME PAGE START------------------ -->
     <div class="home" id="home">
-        <h2 class="hi">Hi, I am</h2>
-        <h1 class="ml9">
-            <span class="text-wrapper">
-                <span class="letters">Ku$# Agarwal</span>
-            </span>
-        </h1>
-        <span class="type"></span>
+        <div style="text-align: center;">
+            <h2 class="hi">Hi, I am</h2>
+            <h1 class="ml9">
+                <span class="text-wrapper">
+                    <span class="letters">Ku$# Agarwal</span>
+                </span>
+            </h1>
+            <span class="type"></span>
+        </div>
+        <div>
+            <img src="src/img/home-animation.gif" alt="" class="home-gif">
+        </div>
     </div>
     <!-- ------------------HOME PAGE END------------------ -->
 
@@ -64,14 +69,28 @@
     <!-- -----------------CONTACT PAGE START----------------- -->
     <div class="contact" id="contact">
         <div class="contact-page" id="contact-page">
-            
+            <h1>Contact Us</h1>
+            <div class="fname-lname">
+                <!-- <label for="fname">First Name</label> -->
+                <input type="text" name="fname" id="fname" placeholder="First Name">
+                <input type="text" name="lname" id="lname" placeholder="Last Name">
+            </div>
+            <input type="email" name="email" id="email" placeholder="Email">
+            <input type="text" name="number" id="number" placeholder="Mobile Number">
+            <textarea name="message" id="message" cols="30" rows="5" placeholder="Message"></textarea>
+            <a href="src/404/index.html"><input type="button" value="Send" id="send"></a>
+            <div class="social">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/kushhhh.sh" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.github.com/Kushhhh-sh" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
         </div>
     </div>
     <!-- -----------------CONTACT PAGE END----------------- -->
 
     <!-- ---------------DARK MODE LIGHT MODE TOGGLW START--------------- -->
     <div class="dark-light-toggle">
-        <input type="checkbox" name="toggle" id="toggle"></button>
+        <input type="checkbox" name="toggle" id="toggle">
         <label for="toggle"><i class="far fa-sun" id="sun"></i><i class="far fa-moon" id="moon"></i></label>
     </div>
     <div class="topBtn"><a href="#home"><i class="fas fa-arrow-up"></i></a></div>
@@ -79,6 +98,7 @@
 
 </body>
 <script src="src/js/typed.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 <script src="src/js/script.js"></script>
 
