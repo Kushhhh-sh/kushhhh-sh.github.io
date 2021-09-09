@@ -6,17 +6,19 @@
 	--light-nav-back: #fff;
 	--light-nav-text: #000;
 	--light-nav-hover: #90e0ef;
-    --light-bg-about: #f8edeb;
-    --light-bg-contact: #e2ece9;
-    --light-bg-projects: #f0efeb;
+	--light-bg-about: #f8edeb;
+	--light-bg-contact: #e2ece9;
+	--light-bg-projects: #f0efeb;
 	--light-bg-toggle: #e4e4e4;
+	--light-bg-contact-div: #fff;
 
 	--dark-nav-back: #000;
 	--dark-nav-text: #fff;
-    --dark-bg-about: #343a40;
-    --dark-bg-projects: #495057;
-    --dark-bg-contact: #6c757d;
-	--dark-bg-toggle:#252525;
+	--dark-bg-about: #343a40;
+	--dark-bg-projects: #495057;
+	--dark-bg-contact: #6c757d;
+	--dark-bg-toggle: #252525;
+	--dark-bg-contact-div: #343a40;
 }
 /* ------------------ROOT ELEMENTS------------------ */
 
@@ -55,20 +57,22 @@
 	--nav-back: var(--light-nav-back);
 	--nav-text: var(--light-nav-text);
 	--nav-hover: var(--light-nav-hover);
-    --bg-about: var(--light-bg-about);
-    --bg-contact:var(--light-bg-contact);
-    --bg-projects: var(--light-bg-projects);
+	--bg-about: var(--light-bg-about);
+	--bg-contact: var(--light-bg-contact);
+	--bg-projects: var(--light-bg-projects);
 	--bg-toggle: var(--light-bg-toggle);
+	--bg-contact-div: var(--light-bg-contact-div);
 }
 
 .dark {
 	--nav-back: var(--dark-nav-back);
 	--nav-text: var(--dark-nav-text);
 	--nav-hover: var(--light-nav-hover);
-    --bg-about: var(--dark-bg-about);
-    --bg-contact: var(--dark-bg-contact);
-    --bg-projects: var(--dark-bg-projects);
+	--bg-about: var(--dark-bg-about);
+	--bg-contact: var(--dark-bg-contact);
+	--bg-projects: var(--dark-bg-projects);
 	--bg-toggle: var(--dark-bg-toggle);
+	--bg-contact-div: var(--dark-bg-contact-div);
 }
 /* ---------------LIGHT AND DARK MODE COLOR VARIABLES END--------------- */
 
@@ -212,7 +216,7 @@ body {
 .about {
 	width: 100%;
 	height: 100vh;
-    background: var(--bg-about);
+	background: var(--bg-about);
 }
 /* -------------------ABOUT STYLE END------------------- */
 
@@ -229,11 +233,24 @@ body {
 	width: 100%;
 	height: 100vh;
 	background: var(--bg-contact);
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
 }
+
+.contact-page {
+	width: 80%;
+	height: 85%;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	background: var(--bg-contact-div);
+	box-shadow: 3px 3px 1em rgba(0, 0, 0, 0.5);
+}
+
 /* -------------------CONTACT STYLE END------------------- */
 
 /* -----------------DARK MODE LIGHT MODE TOGGLE START----------------- */
-.dark-light-toggle{
+.dark-light-toggle {
 	width: 150px;
 	height: 70px;
 	border-radius: 35px;
@@ -249,11 +266,11 @@ body {
 	transition: all .5s ease;
 }
 
-.dark-light-toggle input{
+.dark-light-toggle input {
 	display: none;
 }
 
-.dark-light-toggle label{
+.dark-light-toggle label {
 	width: 50px;
 	height: 50px;
 	font-size: 30px;
@@ -269,15 +286,15 @@ body {
 	cursor: pointer;
 }
 
-#sun{
+#sun {
 	display: none;
 }
 
-#moon{
+#moon {
 	display: block;
 }
 
-.topBtn{
+.topBtn {
 	position: fixed;
 	width: 50px;
 	height: 50px;
@@ -292,7 +309,7 @@ body {
 	transition: all .5s ease;
 }
 
-.topBtn i{
+.topBtn i {
 	font-size: 27px;
 	color: var(--nav-text);
 }
@@ -300,7 +317,6 @@ body {
 
 /* -------------------RESPONSIVE STYLE START------------------- */
 @media (max-width: 800px) {
-
 	/* ----------------------RESPONSIVE NAVBAR START---------------------- */
 	.navbar {
 		background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg2.jpeg");
@@ -413,14 +429,20 @@ body {
 	}
 	/* -----------------------RESPONSIVE HOME END----------------------- */
 
+	/* ---------------------RESPONSIVE CONTACT PAGE START--------------------- */
+	.contact-page {
+		width: 90%;
+	}
+	/* ---------------------RESPONSIVE CONTACT PAGE END--------------------- */
+
 	/* -----------------RESPONSIVE DARK MODE LIGHT MODE TOGGLE START----------------- */
-	.dark-light-toggle{
+	.dark-light-toggle {
 		height: 40px;
 		border-radius: 20px;
 		left: -100px;
 	}
 
-	.dark-light-toggle label{
+	.dark-light-toggle label {
 		height: 40px;
 		width: 40px;
 		display: flex;
@@ -430,12 +452,12 @@ body {
 		margin: 10px;
 	}
 
-	.topBtn{
+	.topBtn {
 		width: 40px;
 		height: 40px;
 	}
 
-	.topBtn i{
+	.topBtn i {
 		font-size: 20px;
 	}
 	/* -----------------RESPONSIVE DARK MODE LIGHT MODE TOGGLE END----------------- */
