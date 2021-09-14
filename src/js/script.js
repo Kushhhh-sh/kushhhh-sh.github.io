@@ -78,16 +78,22 @@ let body = document.querySelector('body');
 let sun = document.querySelector('#sun');
 let moon = document.querySelector('#moon');
 let Toggle = document.querySelector('#toggle');
+let darkLightToggle = document.querySelector('.dark-light-toggle');
+let topBtn = document.querySelector('.topBtn');
 
 Toggle.addEventListener('change', function(){
     if(this.checked){
         moon.style.display = "none";
         sun.style.display = "block";
         body.className = "dark";
+        darkLightToggle.style.boxShadow = '2px 2px .5em 2px rgba(255, 255, 255, 0.5)'
+        topBtn.style.boxShadow = '2px 2px .5em 2px rgba(255, 255, 255, 0.5)'
     }else{
         moon.style.display = "block";
         sun.style.display = "none";
         body.className = "light"
+        darkLightToggle.style.boxShadow = '2px 2px .5em 2px rgba(0, 0, 0, 0.5)'
+        topBtn.style.boxShadow = '2px 2px .5em 2px rgba(0, 0, 0, 0.5)'
     }   
 })
 //-----------------DARK MODE LIGHT MODE TOGGLE END-----------------
@@ -95,3 +101,5 @@ Toggle.addEventListener('change', function(){
 //--------------------CONTACT PAGE JS START--------------------
 
 //--------------------CONTACT PAGE JS END--------------------
+
+AOS.init();

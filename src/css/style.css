@@ -10,6 +10,7 @@
 	--light-bg-contact: #e2ece9;
 	--light-bg-projects: #f0efeb;
 	--light-bg-toggle: #e4e4e4;
+	--light-btn-toggle: #252525;
 	--light-bg-contact-div: #fff;
 
 	--dark-nav-back: #000;
@@ -18,6 +19,7 @@
 	--dark-bg-projects: #495057;
 	--dark-bg-contact: #6c757d;
 	--dark-bg-toggle: #252525;
+	--dark-btn-toggle: #e4e4e4;
 	--dark-bg-contact-div: #343a40;
 }
 /* ------------------ROOT ELEMENTS------------------ */
@@ -66,6 +68,7 @@
 	--bg-contact: var(--light-bg-contact);
 	--bg-projects: var(--light-bg-projects);
 	--bg-toggle: var(--light-bg-toggle);
+	--btn-toggle: var(--light-btn-toggle);
 	--bg-contact-div: var(--light-bg-contact-div);
 }
 
@@ -77,6 +80,7 @@
 	--bg-contact: var(--dark-bg-contact);
 	--bg-projects: var(--dark-bg-projects);
 	--bg-toggle: var(--dark-bg-toggle);
+	--btn-toggle: var(--dark-btn-toggle);
 	--bg-contact-div: var(--dark-bg-contact-div);
 }
 /* ---------------LIGHT AND DARK MODE COLOR VARIABLES END--------------- */
@@ -227,6 +231,38 @@ body {
 	width: 100%;
 	height: 100vh;
 	background: var(--bg-about);
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.about-page{
+	width: 90%;
+	height: 85%;
+	margin-bottom: 20px;
+	display: flex;
+}
+
+.div{
+	width: 40%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.about-img{
+	width: 100%;
+	height: 50%;
+}
+
+.about-skills{
+	width: 100%;
+	height: 50%;
+}
+
+.about-text{
+	width: 60%;
+	height: 100%;
 }
 /* -------------------ABOUT STYLE END------------------- */
 
@@ -342,14 +378,14 @@ body {
 /* -----------------DARK MODE LIGHT MODE TOGGLE START----------------- */
 .dark-light-toggle {
 	width: 150px;
-	height: 70px;
-	border-radius: 35px;
+	height: 50px;
+	border-radius: 25px;
 	background: var(--bg-toggle);
 	color: var(--nav-text);
 	position: fixed;
 	bottom: 40px;
-	left: -65px;
-	box-shadow: 4px 4px 1em rgba(0, 0, 0, 0.5);
+	left: -95px;
+	box-shadow: 2px 2px .5em 2px rgba(0, 0, 0, 0.5);
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
@@ -362,18 +398,18 @@ body {
 }
 
 .dark-light-toggle label {
-	width: 50px;
-	height: 50px;
-	font-size: 30px;
+	width: 40px;
+	height: 40px;
+	font-size: 25px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	outline: none;
 	border: none;
 	border-radius: 50%;
-	margin-right: 15px;
-	background-color: var(--bg-toggle);
-	color: var(--nav-text);
+	margin-right: 8px;
+	background-color: var(--btn-toggle);
+	color: var(--nav-back);
 	cursor: pointer;
 	transition: all .5s ease;
 }
@@ -388,8 +424,8 @@ body {
 
 .topBtn {
 	position: fixed;
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	bottom: 20px;
 	right: 20px;
 	border-radius: 50%;
@@ -397,13 +433,13 @@ body {
 	display: none;
 	justify-content: center;
 	align-items: center;
-	box-shadow: 4px 4px 1em rgba(0, 0, 0, 0.5);
+	box-shadow: 2px 2px .5em 2px rgba(0, 0, 0, 0.5);
 	transition: all .5s ease;
 	cursor: pointer;
 }
 
 .topBtn i {
-	font-size: 27px;
+	font-size: 23px;
 	color: var(--nav-text);
 }
 /* -----------------DARK MODE LIGHT MODE TOGGLE END----------------- */
@@ -433,7 +469,7 @@ body {
 		justify-content: center;
 		align-items: center;
 		background: var(--nav-back);
-		transition: top 1s ease;
+		transition: top .5s ease;
 		display: none;
 	}
 
@@ -526,14 +562,40 @@ body {
 	}
 	/* -----------------------RESPONSIVE HOME END----------------------- */
 
+	/* ---------------------RESPONSIVE ABOUT START--------------------- */
+	.about-page{
+		flex-direction: column-reverse;
+	}
+
+	.about-skills{
+		height: 100%;
+	}
+
+	.about-img{
+		display: none;
+	}
+
+	.div{
+		width: 100%;
+		height: 40%;
+	}
+
+	.about-text{
+		width: 100%;
+		height: 60%;
+	}
+	/* ---------------------RESPONSIVE ABOUT END--------------------- */
+
 	/* ---------------------RESPONSIVE CONTACT PAGE START--------------------- */
 	.contact-page {
 		width: 90%;
+		justify-content: space-evenly;
 	}
 	.fname-lname{
 		flex-direction: column;
 		margin-top: 15px;
 		margin-bottom: 0;
+		justify-content: space-evenly;
 	}
 	#fname, #lname{
 		width: 100%;
@@ -565,22 +627,22 @@ body {
 	.dark-light-toggle {
 		height: 40px;
 		border-radius: 20px;
-		left: -100px;
+		left: -105px;
 	}
 
 	.dark-light-toggle label {
-		height: 40px;
-		width: 40px;
+		height: 30px;
+		width: 30px;
 		display: flex;
-		font-size: 23px;
+		font-size: 20px;
 		justify-content: center;
 		align-items: center;
-		margin: 10px;
+		margin-right: 7px;
 	}
 
 	.topBtn {
-		width: 40px;
-		height: 40px;
+		width: 35px;
+		height: 35px;
 	}
 
 	.topBtn i {
