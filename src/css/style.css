@@ -12,6 +12,7 @@
 	--light-bg-toggle: #e4e4e4;
 	--light-btn-toggle: #252525;
 	--light-bg-contact-div: #fff;
+	--light-bg-about-div: #fff;
 
 	--dark-nav-back: #000;
 	--dark-nav-text: #fff;
@@ -21,6 +22,7 @@
 	--dark-bg-toggle: #252525;
 	--dark-btn-toggle: #e4e4e4;
 	--dark-bg-contact-div: #343a40;
+	--dark-bg-about-div: #6c757d;
 }
 /* ------------------ROOT ELEMENTS------------------ */
 
@@ -70,6 +72,7 @@
 	--bg-toggle: var(--light-bg-toggle);
 	--btn-toggle: var(--light-btn-toggle);
 	--bg-contact-div: var(--light-bg-contact-div);
+	--bg-about-div: var(--light-bg-about-div);
 }
 
 .dark {
@@ -82,6 +85,7 @@
 	--bg-toggle: var(--dark-bg-toggle);
 	--btn-toggle: var(--dark-btn-toggle);
 	--bg-contact-div: var(--dark-bg-contact-div);
+	--bg-about-div: var(--dark-bg-about-div);
 }
 /* ---------------LIGHT AND DARK MODE COLOR VARIABLES END--------------- */
 
@@ -251,18 +255,27 @@ body {
 }
 
 .about-img{
-	width: 100%;
+	/* width: 100%; */
 	height: 50%;
+	background-color: var(--bg-about-div);
+	margin: 5px;
+	border-radius: 15px;
 }
 
 .about-skills{
-	width: 100%;
+	/* width: 100%; */
 	height: 50%;
+	background-color: var(--bg-about-div);
+	margin: 5px;
+	border-radius: 15px;
 }
 
 .about-text{
 	width: 60%;
-	height: 100%;
+	/* height: 100%; */
+	background-color: var(--bg-about-div);
+	margin: 5px;
+	border-radius: 15px;
 }
 /* -------------------ABOUT STYLE END------------------- */
 
@@ -433,7 +446,7 @@ body {
 	display: none;
 	justify-content: center;
 	align-items: center;
-	box-shadow: 2px 2px .5em 2px rgba(0, 0, 0, 0.5);
+	box-shadow: 2px 2px .5em rgba(0, 0, 0, 0.5);
 	transition: all .5s ease;
 	cursor: pointer;
 }
@@ -569,6 +582,7 @@ body {
 
 	.about-skills{
 		height: 100%;
+		margin: 0;
 	}
 
 	.about-img{
@@ -583,6 +597,8 @@ body {
 	.about-text{
 		width: 100%;
 		height: 60%;
+		margin-bottom: 10px;
+		margin-left: 0;
 	}
 	/* ---------------------RESPONSIVE ABOUT END--------------------- */
 
