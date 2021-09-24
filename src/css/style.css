@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Dancing+Script:regular,500,600,700);
 @import url(https://fonts.googleapis.com/css?family=Marck+Script:regular);
+@import url(https://fonts.googleapis.com/css?family=Bad+Script:regular);
 
 /* ------------------ROOT ELEMENTS------------------ */
 :root {
@@ -13,6 +14,7 @@
 	--light-btn-toggle: #252525;
 	--light-bg-contact-div: #fff;
 	--light-bg-about-div: #fff;
+	--light-shadow: 4px 4px 15px rgba(0,0,0, .5);
 
 	--dark-nav-back: #000;
 	--dark-nav-text: #fff;
@@ -21,8 +23,9 @@
 	--dark-bg-contact: #6c757d;
 	--dark-bg-toggle: #252525;
 	--dark-btn-toggle: #e4e4e4;
-	--dark-bg-contact-div: #343a40;
+	--dark-bg-contact-div: #252525;
 	--dark-bg-about-div: #6c757d;
+	--dark-shadow: 4px 4px 15px rgba(255, 255, 255, 0.5);
 }
 /* ------------------ROOT ELEMENTS------------------ */
 
@@ -73,6 +76,7 @@
 	--btn-toggle: var(--light-btn-toggle);
 	--bg-contact-div: var(--light-bg-contact-div);
 	--bg-about-div: var(--light-bg-about-div);
+	--shadow: var(--light-shadow);
 }
 
 .dark {
@@ -86,6 +90,7 @@
 	--btn-toggle: var(--dark-btn-toggle);
 	--bg-contact-div: var(--dark-bg-contact-div);
 	--bg-about-div: var(--dark-bg-about-div);
+	--shadow: var(--dark-shadow);
 }
 /* ---------------LIGHT AND DARK MODE COLOR VARIABLES END--------------- */
 
@@ -96,6 +101,7 @@ html {
 
 body {
 	font-family: 'Dancing Script';
+	overflow-x: hidden;
 }
 
 .navbar {
@@ -115,7 +121,7 @@ body {
 .scroll-active {
 	background: var(--nav-back);
 	color: var(--nav-text);
-	box-shadow: 0 3px 1em rgba(0, 0, 0, 0.5);
+	box-shadow: var(--shadow);
 	z-index: 10;
 }
 
@@ -245,6 +251,7 @@ body {
 	height: 85%;
 	margin-bottom: 20px;
 	display: flex;
+	font-family: 'Bad Script';
 }
 
 .div{
@@ -260,6 +267,10 @@ body {
 	background-color: var(--bg-about-div);
 	margin: 5px;
 	border-radius: 15px;
+	box-shadow: 4px 4px 15px rgba(0, 0, 0, .5);
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
 }
 
 .about-skills{
@@ -268,6 +279,7 @@ body {
 	background-color: var(--bg-about-div);
 	margin: 5px;
 	border-radius: 15px;
+	box-shadow: 4px 4px 15px rgba(0, 0, 0, .5);
 }
 
 .about-text{
@@ -276,6 +288,27 @@ body {
 	background-color: var(--bg-about-div);
 	margin: 5px;
 	border-radius: 15px;
+	box-shadow: 4px 4px 15px rgba(0, 0, 0, .5);
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: center;
+}
+
+.about-text > h1{
+	margin-top:10px;
+	color: var(--nav-text)	;
+}
+
+.img-responsive{
+	width: 35%;
+	border-radius: 50%;
+}
+
+.img-txt h3{
+	/* margin: 20px 0; */
+	line-height:40px;
+	color: var(--nav-text);
 }
 /* -------------------ABOUT STYLE END------------------- */
 
@@ -303,7 +336,7 @@ body {
 	margin-bottom: 20px;
 	border-radius: 10px;
 	background: var(--bg-contact-div);
-	box-shadow: 3px 3px 1em rgba(0, 0, 0, 0.5);
+	box-shadow: var(--shadow);
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -398,12 +431,16 @@ body {
 	position: fixed;
 	bottom: 40px;
 	left: -95px;
-	box-shadow: 2px 2px .5em 2px rgba(0, 0, 0, 0.5);
+	box-shadow: var(--shadow);
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 	transition: all .5s ease;
 	cursor: pointer;
+}
+
+.dark-light-toggle:hover{
+	left: -80px;
 }
 
 .dark-light-toggle input {
@@ -446,9 +483,13 @@ body {
 	display: none;
 	justify-content: center;
 	align-items: center;
-	box-shadow: 2px 2px .5em rgba(0, 0, 0, 0.5);
+	box-shadow: var(--shadow);
 	transition: all .5s ease;
 	cursor: pointer;
+}
+
+.topBtn:hover{
+	transform: scale(1.2);
 }
 
 .topBtn i {

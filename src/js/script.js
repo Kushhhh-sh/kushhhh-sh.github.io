@@ -86,14 +86,14 @@ Toggle.addEventListener('change', function(){
         moon.style.display = "none";
         sun.style.display = "block";
         body.className = "dark";
-        darkLightToggle.style.boxShadow = '2px 2px .5em 2px rgba(255, 255, 255, 0.5)'
-        topBtn.style.boxShadow = '2px 2px .5em 2px rgba(255, 255, 255, 0.5)'
+        // darkLightToggle.style.boxShadow = '2px 2px .5em 2px rgba(255, 255, 255, 0.5)'
+        // topBtn.style.boxShadow = '2px 2px .5em 2px rgba(255, 255, 255, 0.5)'
     }else{
         moon.style.display = "block";
         sun.style.display = "none";
         body.className = "light"
-        darkLightToggle.style.boxShadow = '2px 2px .5em 2px rgba(0, 0, 0, 0.5)'
-        topBtn.style.boxShadow = '2px 2px .5em 2px rgba(0, 0, 0, 0.5)'
+        // darkLightToggle.style.boxShadow = '2px 2px .5em 2px rgba(0, 0, 0, 0.5)'
+        // topBtn.style.boxShadow = '2px 2px .5em 2px rgba(0, 0, 0, 0.5)'
     }   
 })
 //-----------------DARK MODE LIGHT MODE TOGGLE END-----------------
