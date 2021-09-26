@@ -280,6 +280,33 @@ body {
 	margin: 5px;
 	border-radius: 15px;
 	box-shadow: 4px 4px 15px rgba(0, 0, 0, .5);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: var(--nav-text);
+}
+
+.about-skills ul{
+	list-style: none;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.about-skills ul li{
+	width: 90%;
+	margin-top: 15px;
+}
+
+.skill-bar{
+	width: 100%;
+	height: 10px;
+	background-color: lightblue;
+}
+
+.about-skills > h3{
+	margin-top: 10px;
 }
 
 .about-text{
@@ -293,6 +320,15 @@ body {
 	flex-direction: column;
 	/* justify-content: center; */
 	align-items: center;
+	overflow-y: auto;
+}
+
+.about-text p{
+	padding: 0 50px;
+	font-size: 20px;
+	text-indent: 50px;
+	margin-bottom: 15px;
+	color: var(--nav-text);
 }
 
 .about-text > h1{
@@ -317,6 +353,10 @@ body {
 	width: 100%;
 	height: 100vh;
 	background: var(--bg-projects);
+}
+
+.projects img{
+	/* display: none; */
 }
 /* -------------------PROJECTS STYLE END------------------- */
 
@@ -640,6 +680,24 @@ body {
 		height: 60%;
 		margin-bottom: 10px;
 		margin-left: 0;
+		overflow-y: auto;
+	}
+
+	.about-text p{
+		font-size: 15px;
+		margin: none;
+		padding: 0 20px;
+	}
+
+	.skill-bar{
+		display: inline-block;
+		width: 70%;
+	}
+
+	.about-skills ul li{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 	/* ---------------------RESPONSIVE ABOUT END--------------------- */
 
@@ -687,6 +745,10 @@ body {
 		left: -105px;
 	}
 
+	.dark-light-toggle:hover{
+		left: -95px;
+	}
+
 	.dark-light-toggle label {
 		height: 30px;
 		width: 30px;
@@ -708,3 +770,14 @@ body {
 	/* -----------------RESPONSIVE DARK MODE LIGHT MODE TOGGLE END----------------- */
 }
 /* -------------------RESPONSIVE STYLE END------------------- */
+
+
+@media(max-width: 1250px) and ( min-width: 800px)
+{
+	.about-img{
+		flex-direction: column;
+	}
+	.img-responsive{
+		width: 100px;
+	}
+}
